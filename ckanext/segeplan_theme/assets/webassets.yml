@@ -1,0 +1,14 @@
+# segeplan_theme-js:
+#   filter: rjsmin
+#   output: ckanext-segeplan_theme/%(version)s-segeplan_theme.js
+#   contents:
+#     - js/segeplan_theme.js
+#   extra:
+#     preload:
+#       - base/main
+
+# segeplan_theme-css:
+#   filter: cssrewrite
+#   output: ckanext-segeplan_theme/%(version)s-segeplan_theme.css
+#   contents:
+#     - css/segeplan_theme.css

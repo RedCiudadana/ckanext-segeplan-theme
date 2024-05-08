@@ -1,0 +1,97 @@
+:root {
+  --segeplan-primary-color: #232145;
+  --segeplan-secondary-color: #7ac5f6;
+  --segeplan-third-color: #008a87;
+  --segeplan-header-color: #1a318e;
+  --segeplan-body-font: 'Poppins';
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: medium;
+  font-weight: 500;
+  src: url(/fonts/Poppins-Medium.ttf);
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: lighter;
+  font-weight: 300;
+  src: url(/fonts/Poppins-Light.ttf);
+}
+
+@font-face {
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/fonts/Poppins-Regular.ttf);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+.masthead {
+  background-color: var(--segeplan-main-color);
+}
+
+.site-footer {
+  background-color: var(--segeplan-secondary-color);
+}
+
+.masthead .main-navbar ul li:hover a,
+.masthead .main-navbar ul li:focus a,
+.masthead .main-navbar ul li.active a {
+  border-radius: 0.3rem;
+  background-color: var(--segeplan-secondary-color);
+  color: black;
+}
+
+#flDebug .flDebugPanelContentParent {
+  overflow: scroll;
+}
+
+.featured_data>div {
+  text-align: center;
+}
+
+.featured_data>div img {
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+}
+
+.featured_data>div h3 {
+  color: var(--segeplan-header-color);
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1;
+  height: 3rem;
+  text-transform: uppercase;
+}
+
+.featured_data>div p {
+  color: var(--segeplan-header-color);
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 4px;
+  border-radius: 50%;
+  text-transform: uppercase;
+  background-color: white;
+}
+
+.featured_data>div a {
+  color: var(--segeplan-header-color);
+  border-color: var(--segeplan-third-color);
+  border-width: 1px;
+  border-style: solid;
+  font-weight: 300;
+  font-size: 1rem;
+  width: 100px;
+  display: block;
+  margin: auto;
+  padding: 4px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  background-color: white;
+}
