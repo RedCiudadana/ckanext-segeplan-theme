@@ -38,7 +38,15 @@ body {
 }
 
 .site-footer {
+  color: white;
   background-color: var(--segeplan-secondary-color);
+}
+
+.site-footer a,
+.site-footer strong,
+.site-footer label
+{
+  color: white;
 }
 
 .masthead .main-navbar ul li:hover a,
