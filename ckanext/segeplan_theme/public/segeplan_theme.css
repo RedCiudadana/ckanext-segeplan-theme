@@ -2,7 +2,9 @@
   --segeplan-primary-color: #232145;
   --segeplan-secondary-color: #7ac5f6;
   --segeplan-third-color: #008a87;
+  --segeplan-four-color: #b3b3b3;
   --segeplan-header-color: #1a318e;
+  --segeplan-border-color: #3db4c5;
   --segeplan-body-font: 'Poppins';
 }
 
@@ -32,7 +34,7 @@ body {
 }
 
 .masthead {
-  background-color: var(--segeplan-main-color);
+  background-color: var(--segeplan-primary-color);
 }
 
 .site-footer {
@@ -51,6 +53,12 @@ body {
   overflow: scroll;
 }
 
+.featured_data {
+  margin-bottom: 4.5rem;
+  margin-left: 0;
+  margin-right: 0;
+}
+
 .featured_data>div {
   text-align: center;
 }
@@ -59,24 +67,22 @@ body {
   width: 100%;
   height: auto;
   max-width: 200px;
+  margin-bottom: 1rem;
 }
 
 .featured_data>div h3 {
   color: var(--segeplan-header-color);
   font-weight: 500;
-  font-size: 1.5rem;
+  font-size: 1rem;
   line-height: 1;
-  height: 3rem;
   text-transform: uppercase;
 }
 
 .featured_data>div p {
   color: var(--segeplan-header-color);
   font-weight: 300;
-  font-size: 1rem;
+  font-size: 0.75rem;
   padding: 4px;
-  border-radius: 50%;
-  text-transform: uppercase;
   background-color: white;
 }
 
@@ -87,11 +93,162 @@ body {
   border-style: solid;
   font-weight: 300;
   font-size: 1rem;
-  width: 100px;
+  min-width: 150px;
+  width: min-content;
   display: block;
   margin: auto;
-  padding: 4px;
+  padding: 4px 12px;
   border-radius: 20px;
   text-transform: uppercase;
   background-color: white;
+}
+
+.homepage .hero {
+  padding: 3.75rem 0;
+  background: white;
+}
+
+.main-banner-promoted {
+  position: relative;
+}
+
+.main-banner-promoted h1 {
+  font-size: 4rem;
+  color: var(--segeplan-four-color);
+  font-weight: 900;
+}
+
+.main-banner-promoted h2 {
+  font-size: 2.75rem;
+  color: var(--segeplan-header-color);
+  font-weight: lighter;
+}
+
+.main-banner-promoted p {
+  font-size: 1rem;
+  color: var(--segeplan-header-color);
+  max-width: 500px;
+}
+
+.main-banner-promoted .image {
+  user-select: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: auto;
+  max-width: 60%;
+  max-height: 100%;
+  height: auto;
+}
+
+.main-banner-promoted .icon {
+  user-select: none;
+  position: absolute;
+  bottom: -40px;
+  right: 0;
+  width: auto;
+  max-width: 50%;
+  max-height: 100%;
+  height: auto;
+}
+
+.features.row {
+  margin-top: 4rem;
+  gap: 40px;
+}
+
+.features.row .col {
+  text-align: left;
+  flex: 0 0 auto;
+  overflow: hidden;
+}
+
+.features.row .col .inner {
+  position: relative;
+  border: 4px solid var(--segeplan-border-color);
+  padding: 20px;
+  margin-bottom: 4px;
+}
+
+.features.row .col .inner .extra {
+  pointer-events: none;
+  position: absolute;
+  right: -4px;
+  bottom: -4px;
+  width: 230px;
+  max-width: 45%;
+  height: 30px;
+  clip-path: polygon(15px 0, 100% 0, calc(100%) 100%, 0% 100%);
+  background-color: var(--segeplan-border-color);
+}
+
+.features.row .col .extra::before {
+  content: '';
+  display: block;
+  width: 110%;
+  height: 100%;
+  position: absolute;
+  top: 4px;
+  left: 3px;
+  clip-path: polygon(15px 0, 100% 0, calc(100%) 100%, 0% 100%);
+  background-color: white;
+}
+
+.features.row .col .extra::after {
+  content: '';
+  display: block;
+  width: 110%;
+  height: 100%;
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  clip-path: polygon(15px 0, calc(100% - 28px) 0, calc(100% - 48px) 100%, 0% 100%);
+  background-color: var(--segeplan-four-color);
+}
+
+@media (min-width: 768px) {
+  .features.row .col {
+    flex: 0 0 calc(33% - 80px/3);
+  }
+}
+
+.features.row .col h3 {
+  font-size: 2rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  color: var(--segeplan-header-color);
+}
+
+.features.row .col p {
+  font-size: 0.75rem;
+  font-weight: bold;
+  color: var(--segeplan-header-color);
+}
+
+.homepage .module-feeds {
+  background: #fff;
+}
+
+.featured_organization {
+  margin-bottom: 4.5rem;
+  margin-left: 0;
+  margin-right: 0;
+  justify-content: center;
+}
+
+.featured_organization .col-12 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: space-around;
+}
+
+.featured_organization a {
+  text-decoration: none;
+}
+
+.featured_organization img {
+  width: 100%;
+  height: auto;
+  margin: auto;
 }

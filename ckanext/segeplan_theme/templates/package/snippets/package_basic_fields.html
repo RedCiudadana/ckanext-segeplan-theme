@@ -1,0 +1,15 @@
+{% ckan_extends %}
+
+{#
+  {% block package_basic_fields_custom %}
+    {{ form.input(
+      'image',
+      label=_('Imagen del conjunto de datos'),
+      id='field-image',
+      placeholder=_('Subir imagen'),
+      value=data.imagen,
+      error=errors.imagen,
+      classes=['control-medium']
+    ) }}
+  {% endblock %}
+#}

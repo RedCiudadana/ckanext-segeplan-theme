@@ -1,0 +1,27 @@
+<div class="features row">
+  {% set homepage_values = h.segeplan_theme_homepage_values() %}
+
+  <div class="col">
+    <div class="inner">
+      <h3>{{ _('¿Qué son los datos abiertos?')}}</h3>
+      <p>{{ homepage_values['homepage_what_is'] }}</p>
+      <div class="extra"></div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="inner">
+      <h3>{{ _('Guía de datos abiertos')}}</h3>
+      <p>{{ homepage_values['homepage_guide'] }}</p>
+      <div class="extra"></div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="inner">
+      <h3>{{ _('Eventos de datos abiertos')}}</h3>
+      <p>{{ homepage_values['homepage_events'] }}</p>
+      <div class="extra"></div>
+    </div>
+  </div>
+</div>

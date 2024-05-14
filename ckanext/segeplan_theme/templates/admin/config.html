@@ -1,0 +1,43 @@
+{% ckan_extends %}
+
+{% import 'macros/form.html' as form %}
+
+{% block admin_form %}
+
+  {{ super() }}
+
+  <h3>{{ _('Custom configuration options') }}</h3>
+
+  {{ form.markdown(
+    'ckanext.segeplan_theme.homepage_what_is',
+    id='field-ckanext.segeplan_theme.homepage_what_is',
+    label=_('Página de inicio (Qué son datos abiertos)'),
+    value=data['ckanext.segeplan_theme.homepage_what_is'],
+    error=errors['ckanext.segeplan_theme.homepage_what_is'])
+  }}
+
+  {{ form.markdown(
+    'ckanext.segeplan_theme.homepage_guide',
+    id='field-ckanext.segeplan_theme.homepage_guide',
+    label=_('Página de inicio (Guía de datos abiertos)'),
+    value=data['ckanext.segeplan_theme.homepage_guide'],
+    error=errors['ckanext.segeplan_theme.homepage_guide'])
+  }}
+
+  {{ form.markdown(
+    'ckanext.segeplan_theme.homepage_events',
+    id='field-ckanext.segeplan_theme.homepage_events',
+    label=_('Página de inicio (Eventos de datos abiertos)'),
+    value=data['ckanext.segeplan_theme.homepage_events'],
+    error=errors['ckanext.segeplan_theme.homepage_events'])
+  }}
+{% endblock %}
+
+
+{% block admin_form_help %}
+
+  {{ super() }}
+
+  <p><strong>Página de inicio:</strong> {{ _('Los valores se utilizarán com las descripciones de cada punto') }}</p>
+
+{% endblock %}

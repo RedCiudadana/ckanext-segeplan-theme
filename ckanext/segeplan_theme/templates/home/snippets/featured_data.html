@@ -1,26 +1,15 @@
-<div class="featured_data row m-0">
-  <div class="col-12 col-md-3">
-    <img src="/img/dataset-icon-1.png" alt="">
-    <h3>{{ _('Presupuesto de Guatemala') }}</h3>
-    {# <p>{{ _('No hay nada') }}</p> #}
-    <a href="#">{{ _('Ver más') }}</a>
-  </div>
-  <div class="col-12 col-md-3">
-    <img src="/img/dataset-icon-1.png" alt="">
-    <h3>{{ _('Contrataciones y adquisiciones') }}</h3>
-    {# <p>{{ _('No hay nada') }}</p> #}
-    <a href="#">{{ _('Ver más') }}</a>
-  </div>
-  <div class="col-12 col-md-3">
-    <img src="/img/dataset-icon-1.png" alt="">
-    <h3>{{ _('Presupuesto municipales') }}</h3>
-    {# <p>{{ _('No hay nada') }}</p> #}
-    <a href="#">{{ _('Ver más') }}</a>
-  </div>
-  <div class="col-12 col-md-3">
-    <img src="/img/dataset-icon-1.png" alt="">
-    <h3>{{ _('Multimedia') }}</h3>
-    {# <p>{{ _('No hay nada') }}</p> #}
-    <a href="#">{{ _('Ver más') }}</a>
-  </div>
+<div class="featured_data row">
+  {% set groups = h.get_featured_groups() %}
+
+  {% for group in groups %}
+    {% set title = group.title or group.name %}
+    <div class="col-12 col-md-3">
+      <img src="{{ group.image_display_url or h.url_for_static('/base/images/placeholder-group.png') }}" alt="{{ group.name }}">
+      <h3>{{ title }}</h3>
+      {% if group.description %}
+          <p>{{ h.markdown_extract(group.description, 120)|urlize }}</p>
+      {% endif %}
+      <a href="{{ h.url_for(group.type ~ '.read', id=group.name) }}">{{ _('Ver más') }}</a>
+    </div>
+  {% endfor %}
 </div>

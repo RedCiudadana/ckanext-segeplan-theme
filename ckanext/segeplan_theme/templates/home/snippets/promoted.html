@@ -1,0 +1,11 @@
+{% set intro = g.site_intro_text %}
+
+<div class="main-banner-promoted">
+  <div>
+    {% if intro %}
+      {{ h.render_markdown(intro) }}
+    {% endif %}
+  </div>
+  <img class="image" src="/img/slider-image.png" alt="">
+  <img class="icon" src="/img/slider-icon.png" alt="">
+</div>
