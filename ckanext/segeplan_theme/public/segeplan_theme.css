@@ -3,6 +3,7 @@
   --segeplan-secondary-color: #7ac5f6;
   --segeplan-third-color: #008a87;
   --segeplan-four-color: #b3b3b3;
+  --segeplan-fifth-color: #58c6f5;
   --segeplan-header-color: #1a318e;
   --segeplan-border-color: #3db4c5;
   --segeplan-body-font: 'Poppins';
@@ -39,7 +40,7 @@ body {
 
 .site-footer {
   color: white;
-  background-color: var(--segeplan-secondary-color);
+  background-color: var(--segeplan-fifth-color);
 }
 
 .site-footer a,
@@ -47,6 +48,53 @@ body {
 .site-footer label
 {
   color: white;
+}
+
+.site-footer .footer-links h3 {
+  font-size: 2.5rem;
+}
+
+.site-footer .footer-links > img {
+  max-width: 190px;
+  margin-bottom: 1rem;
+}
+
+.site-footer .footer-links > ul {
+  margin-bottom: 1rem;
+}
+
+.site-footer .footer-links > iframe {
+  max-width: 100%;
+}
+
+.site-footer .contact-info li {
+  font-size: 1rem;
+}
+
+.site-footer .contact-info li img {
+  width: 25px;
+  height: 25px;
+}
+
+.site-footer .attribution > img {
+  max-width: 350px;
+  height: auto;
+  padding-bottom: 1.75rem;
+  margin-bottom: 1.75rem;
+  border-bottom: 1px solid white;
+}
+
+.site-footer .attribution ul {
+  margin-bottom: 1rem;
+}
+
+.site-footer .attribution li {
+  margin-bottom: 0.25rem;
+}
+
+.site-footer .attribution li img {
+  width: 35px;
+  height: 35px;
 }
 
 .masthead .main-navbar ul li:hover a,

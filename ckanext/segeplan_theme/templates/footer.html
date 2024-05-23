@@ -1,0 +1,66 @@
+<footer class="site-footer">
+  <div class="container">
+    {% block footer_content %}
+    <div class="row">
+      <div class="col-md-6 footer-links">
+        <h3>{{ _('+ CONTÁCTANOS') }}</h3>
+        <img src="/img/segeplan-text.jpg" alt="Segeplan">
+
+        <ul class="list-unstyled contact-info">
+          {% block footer_links %}
+            <li> <img src="/img/icons/1.png" alt=""> info@segeplan.gob.gt</li>
+            <li> <img src="/img/icons/2.png" alt=""> +(502) 2504-4444</li>
+            <li> <img src="/img/icons/3.png" alt=""> 09:00 a 17:00 hrs.</li>
+            <li> <img src="/img/icons/4.png" alt=""> 9a. calle 10-44 zona 1, Guatemala</li>
+          {% endblock %}
+        </ul>
+
+        <iframe src="https://www.google.com/maps/d/embed?mid=1gVUqtINR2Tq6K1lTWa0l7tkGGp_U7oI&amp;ehbc=2E312F" width="500" height="300"></iframe>
+      </div>
+      <div class="col-md-6 attribution">
+        <img src="/img/segeplan-edificio.jpg" alt="Edificio de segeplan">
+        <ul class="list-unstyled">
+          <li>
+            <a href="https://www.youtube.com/channel/UC6_LyaH6aAYzDydSezE5LDw">
+              <img src="https://portal.segeplan.gob.gt/segeplan/wp-content/uploads/2024/01/Pagina-web-17.jpg" alt="www.youtube">
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/segeplan">
+              <img src="https://portal.segeplan.gob.gt/segeplan/wp-content/uploads/2024/01/Pagina-web-13.jpg" alt="twitter.com">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/segeplan?igsh=MTNmYzFyanpmcGZ5aA==">
+              <img src="https://portal.segeplan.gob.gt/segeplan/wp-content/uploads/2024/01/Pagina-web-14.jpg" alt="www.instagram">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.facebook.com/SegeplanGT/">
+              <img src="https://portal.segeplan.gob.gt/segeplan/wp-content/uploads/2024/01/Pagina-web-12.jpg" alt="www.facebook">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/company/segeplan/">
+              <img src="https://portal.segeplan.gob.gt/segeplan/wp-content/uploads/2024/01/Pagina-web-15.jpg" alt="www.linkedin">
+            </a>
+          </li>
+          <li>
+            <a href="https://www.tiktok.com/@somossegeplangt">
+              <img src="https://portal.segeplan.gob.gt/segeplan/wp-content/uploads/2024/01/Pagina-web-16.jpg" alt="www.tiktok">
+            </a>
+          </li>
+          <li>
+            <a href="https://whatsapp.com/channel/0029VaEd3VSDTkK7TBJRQk2k">
+              <img src="https://portal.segeplan.gob.gt/segeplan/wp-content/uploads/2024/01/Pagina-web-18.jpg" alt="whatsapp.com">
+            </a>
+          </li>
+        </ul>
+        {% block footer_lang %}
+          {% snippet "snippets/language_selector.html" %}
+        {% endblock %}
+      </div>
+    </div>
+    {% endblock %}
+  </div>
+</footer>
