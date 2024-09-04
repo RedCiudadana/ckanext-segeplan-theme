@@ -68,39 +68,5 @@ class SegeplanThemePlugin(plugins.SingletonPlugin, toolkit.DefaultDatasetForm):
         # registers itself as the default (above).
         return []
 
-    def _modify_package_schema(self, schema: Schema):
-        # We are using groups now in the homepage no need to add custom properties
-        return schema
-        # Add our custom metadata fields to the schema.
-        # our custom field
-        schema.update({
-            'image': [toolkit.get_validator('ignore_missing'),
-                            toolkit.get_converter('convert_to_extras')]
-        })
-        return schema
-
-    def create_package_schema(self) -> Schema:
-        # let's grab the default schema in our plugin
-        schema: Schema = super(
-            SegeplanThemePlugin, self).create_package_schema()
-        schema = self._modify_package_schema(schema)
-        return schema
-
-    def update_package_schema(self) -> Schema:
-        # let's grab the default schema in our plugin
-        schema: Schema = super(
-            SegeplanThemePlugin, self).create_package_schema()
-        schema = self._modify_package_schema(schema)
-        return schema
-
-    def show_package_schema(self) -> Schema:
-        schema: Schema = super(
-            SegeplanThemePlugin, self).show_package_schema()
-        schema.update({
-            'image': [toolkit.get_converter('convert_from_extras'),
-                            toolkit.get_validator('ignore_missing')]
-        })
-        return schema
-
     def get_helpers(self):
         return {'segeplan_theme_homepage_values': homepage_values_helper}
