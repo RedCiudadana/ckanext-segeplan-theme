@@ -1,5 +1,5 @@
 <div class="featured_data row">
-  {% set groups = h.get_featured_groups() %}
+  {% set groups = h.get_featured_groups(4) %}
 
   {% for group in groups %}
     {% set title = group.title or group.name %}
