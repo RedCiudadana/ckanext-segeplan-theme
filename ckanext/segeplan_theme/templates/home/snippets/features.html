@@ -4,15 +4,15 @@
   <div class="col">
     <div class="inner">
       <h3>{{ _('¿Qué son los datos abiertos?')}}</h3>
-      <p>{{ homepage_values['homepage_what_is'] }}</p>
+      <p>{{ homepage_values['homepage_what_is'] | e}}</p>
       <div class="extra"></div>
     </div>
   </div>
 
   <div class="col">
     <div class="inner">
-      <h3>{{ _('Guía de datos abiertos')}}</h3>
-      <p>{{ homepage_values['homepage_guide'] }}</p>
+      <h3>{{ _('Datos abiertos disponibles')}}</h3>
+      <p>{{ homepage_values['homepage_guide'] | e}}</p>
       <div class="extra"></div>
     </div>
   </div>
@@ -20,7 +20,7 @@
   <div class="col">
     <div class="inner">
       <h3>{{ _('Eventos de datos abiertos')}}</h3>
-      <p>{{ homepage_values['homepage_events'] }}</p>
+      <p>{{ homepage_values['homepage_events'] | e}}</p>
       <div class="extra"></div>
     </div>
   </div>
