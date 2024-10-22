@@ -308,3 +308,24 @@ body {
   height: auto;
   margin: auto;
 }
+
+.footer-rc {
+  background-color: #033250;
+  color: white;
+  width: 100%;
+  display: block;
+  padding: 0.75rem 0;
+}
+
+.footer-rc img {
+  max-height: 48px;
+  max-width: 100%;
+  width: auto;
+  text-decoration: none;
+}
+
+.footer-rc p {
+  color: white;
+  margin: auto 0;
+  font-size: 0.75rem;
+}
